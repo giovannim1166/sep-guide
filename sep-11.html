@@ -59,9 +59,146 @@
       </div>
       <div class="col-sm-8 text-left">
         <h1>SEP 11</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>
+          <li><h2>Git and Github</h2></li>
+          
+          
+          
+          
+          
+       <p>    <h3>GitHub Tutorial</h3>
+<br>
+
+
+<h4>Git vs. GitHub</h4>  <br>
+
+Git is a type of verion control. A version control is a system that records the changes being 
+mad on a file in this case our repositories. Git screenshots the coding and it does not need 
+internet to run. It runs in your local computer. Git does not need GitHub to run. Git is used by all 
+developers. Git is in your command line. After you are complete with making your directory. you can just 
+git add and git commit we will get more into that in Workflow & Commands.
+<br>
+<br>
+GitHub is the cloud that contains the repositories. This helps save files incase something goes 
+wrong on the local machine. GitHub has to be run by Git. In this case internet in required to connect
+to the cloud. GitHub can be usefull if a person needs to share his or her files with another person. 
+GitHub is the remote. 
+<br>
+<br>
+
+
+
+<h5>Initial Setup</h5><br> 
+For using GitHub you need to go to <a href = "http://github.com">Github</a><br>
+Make an account and sign into your account. <br> 
+Set up SSH key to connect GitHub with your command line.<br><br>  
+
+For an example on <a href = "http://nitrous.io">Nitrous</a><br>  
+<ul> 1. Go on username <br> 
+  2. Dashboard  <br>
+  3. SSH Key tab  <br>
+  4. copy SSH Key </ul><br>
+
+
+On GitHub   <br>
+<ul>  1. Go into your profile.<br>  
+  2. Go into <kbd>Setting</kbd> <br>
+  3. Go to <kbd>SSH keys</kbd>  <br>
+  4. Click on <kbd>Add SSH Keys</kbd>   <br>   
+  6. Give it a title (example: Nitrous)  <br>
+  5. Paste your Key   <br>
+  </ul>
+  <br>
+Once you are in your container open IDE  <br>
+ 
+And now you have to Start Coding on your command line  <br> 
+<kbd>ssh -T git@github.com</kbd>  and type <kbd>yes</kbd>    <br>
+Now you have to <kbd>git config</kbd>:  <br>
+First make a dirictory:  <br>
+<kbd>mkdir first-repo</kbd>  <br>
+<kbd>cd first-repo</kbd>  <br>
+<kbd>pwd</kbd> to check where you're at  <br>
+you should be at <kbd>/home/nitrous/first-repo</kbd>  <br>
+<kbd>git init</kbd>  <br>
+<kbd>git config --global user.name “First Last”</kbd> <br>
+<kbd>git config --global user.email “your email”</kbd>  <br>
+<h3>You are command line is now coonected with GitHub.</h3><br><br><br>
+
+
+
+
+
+
+<h5>Repository Setup</h5><br>
+`pwd` to check where you are  <br>
+You should be in /home/nitrous/first-repo  <br>
+There should be `(master)` writen next to it confirming that you are using Git  <br>
+`touch README.md`  <br>
+open the README > WHATEVER YOU WANT TO WRITE  <br>
+For Nitrous you have to manually save.  <br>
+`git add README.md`   <br>
+git commit -m “commit message (ex; add readme)” <br> 
+Back in GitHub go to the `+`  <br>
+New Repository  <br>
+Repository name: first-repo (has to be the same)  <br>
+Create Repository  <br>
+Click SSH next to URL  <br>
+Copy the `git remote`  <br>
+Now copy the `git push`  <br>
+Now refresh your GitHub page and you should be able to see the changes.  <br>
+From now you just work on you README.md <br>
+Add and Commit  <br>
+And `git push` no need for the `-u orgin master`<br><br><br>
+
+
+
+<h5>Workflow & Commands</h5>  <br>
+<kbd>git</kbd> a git command  <br>
+<kbd>remote</kbd> we are setting up a connection between our current repository and an external one  <br>
+<kbd>add</kbd> to add a repo into file   <br>
+`origin` this is our “nickname” for the remote repo.    <br>
+`URL` the location of the remote repo.    <br>
+`push` we are sending our commits from our local repo to our remote repo  <br>
+`-u` means “upstream.” This remembers which remote repo & branch to push our changes to when    <br>
+we type “git push” in the future.  <br>
+`origin` this is which remote we are pushing to  <br>
+`master` the “main” branch of your project   <br>
+`pull` bring any changes from the remote to the local   <br>
+`git init` initializes git in our directory/repository for version control, only do this once
+at the beginning  <br>
+`git status` optional command to see which files have been edited since the last commit    <br>
+`git add file.ext` add the file to the stage to be committed   <br>
+`git commit -m “specific message”` take a snapshot of the repo, present-tense and describe what was changed  <br>
+`git log` see your past commits  <br>
+`git diff` see the difference between your current code and the previous commit<br>
+`git clone URL` clones remote repo to local<br><br><br><br><br>
+
+---
+##Colaboration  <br>
+You are able to colaborate and share another persons repo by `forking` it from his or her remote to yours,
+`cloning` into your local computer, making your own changes, then `pushing` it back to your repo. 
+Afterwards you can send a `pull request` to the him or her once he or she likes the changes, they can 
+pull it into their remote and save it as a commit.  <br>
+1. Go on GitHub  <br>
+2. Go on the persons repo  <br>
+3. Fork it  <br>
+4. It should be sent to your Remote  <br>
+5. Clone it down to your local  <br>
+6. Make your changes  <br>
+7. Push it back up to your remote   <br>
+8. Do a pull request, once the person confirms he can commit it.  <br><br><br>
+
+If someone sent you a pull request you simply go into your repo, go to your pull requests.
+Look at it. If you like it CONFIRM. And that will be your snapshot. You can then clone it
+down to your Local and work on it from there.
+</p><br><br>
+          
+          
+          
+          
+          
+          <li><b>WEB Design</b></li>
+        </p>
         <hr>
         <h3>Test</h3>
         <p>Lorem ipsum...</p>
