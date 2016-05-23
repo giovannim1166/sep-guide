@@ -21,13 +21,18 @@
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script>
     $(function() {
-    $('scratch').click(function(){
-        // get the inputs from the user
-       
- 
-          $('scratch2').html();
+
+      $("#scratch").click(function() {
+        $("#scratch2").fadeIn();
+      });
+      $("#robotics").click(function() {
+        $("#robotics2").fadeIn();
+      });
+      $("#python").click(function() {
+        $("#python2").fadeIn();
+      });
+
     });
-    
   </script>
 </head>
 
@@ -78,7 +83,7 @@
 
       <div class="col-sm-12 text-center">
         <h1 id="scratch">Scratch</h1>
-        <p id "scratch2">
+        <p  style="display:none" id ="scratch2">
           In scratch, you will learn how to make small, fun, simple games and programs to get your year started. You will use blocks to make code, and learn the basics of coding.
         </p>
         <img src="screenshot1.png" id="screenshot1" width="50%">
@@ -86,19 +91,19 @@
         <hr>
         <h1 id="robotics">Robotics</h1>
 
-        <p id="robotics2">
+        <p style="display:none" id="robotics2">
           In robotics prepare to use lego robots to help learn robotics and how to make robots follow certain programs, and make them do things like following a certain path.
 
         </p>
         <img src="lego.png" id="lego" width="50%">
         <hr>
         <h1 id="python">Python</h1>
-        <p="python2">
+        <p  style="display:none" id="python2">
           With python you can create web apps and games, much more complicated than what you could create with Scratch, allowing you to express your creativity by making art and game
 
-        </p>
-        <img src="screenshot2.png" id="screenshot2" width="50%">
-        <hr>
+          </p>
+          <img src="screenshot2.png" id="screenshot2" width="50%">
+          <hr>
 
       </div>
 
